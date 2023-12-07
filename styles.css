@@ -1,0 +1,19 @@
+body {
+    font-family: 'Consolas', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #222; /* Dark background color */
+    color: #87CEEB; /* Light text color */
+}
+
+.countdown-container {
+    display: flex;
+}
+
+.countdown-item {
+    margin: 0 10px;
+    font-size: 10em; /* Increased font size */
+}
