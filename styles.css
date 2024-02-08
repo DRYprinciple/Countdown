@@ -1,31 +1,29 @@
 body {
-    font-family: 'Arial', sans-serif;
+    font-family: 'Consolas', sans-serif;
     display: flex;
     align-items: center;
     justify-content: center;
     height: 100vh;
     margin: 0;
     background-color: #222; /* Dark background color */
-    color: #fff; /* Light text color */
+    color: #87CEEB; /* Light text color */
 }
 
 .countdown-container {
     display: flex;
-    flex-wrap: wrap; /* Allow items to wrap to the next line on smaller screens */
-    justify-content: center; /* Center items horizontally */
-    text-align: center; /* Center text within items */
+}
+
+.old-man {
+    text-align: right;
+    margin-bottom: 100px; /* Adjust as needed */
+    margin-left: auto;
+}
+
+.old-man h2 {
+    margin: 0 15px
 }
 
 .countdown-item {
-    margin: 0 10px;
-    font-size: 2em; /* Increased font size */
-    color: #87CEEB; /* Light blue color */
-}
-
-@media (max-width: 600px) {
-    /* Adjust styles for screens with a width of 600 pixels or less (typical for mobile devices) */
-    .countdown-item {
-        font-size: 1.5em; /* Reduce font size for smaller screens */
-        margin: 5px; /* Adjust margin for better spacing on smaller screens */
-    }
+    margin: 150px 15px;
+    font-size: 4em; /* Increased font size */
 }
