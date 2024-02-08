@@ -11,19 +11,37 @@ body {
 
 .countdown-container {
     display: flex;
+    flex-direction: column; /* Change to column layout for mobile */
+    align-items: center; /* Center vertically */
 }
 
 .old-man {
-    text-align: right;
-    margin-bottom: 100px; /* Adjust as needed */
-    margin-left: auto;
+    text-align: center; /* Center align for mobile */
+    margin-bottom: 20px; /* Adjust margin */
 }
 
 .old-man h2 {
-    margin: 0 15px
+    margin: 0; /* Remove left and right margin */
 }
 
 .countdown-item {
-    margin: 150px 15px;
-    font-size: 4em; /* Increased font size */
+    margin: 20px 0; /* Adjust margin */
+    font-size: 2em; /* Decrease font size for mobile */
+}
+
+@media (min-width: 600px) {
+  .countdown-container {
+    flex-direction: row; /* Revert to row layout for larger screens */
+  }
+
+  .old-man {
+    text-align: right; /* Align to the right for larger screens */
+    margin-left: auto;
+    margin-bottom: 100px; /* Adjust margin */
+  }
+
+  .countdown-item {
+    margin: 150px 15px; /* Adjust margin */
+    font-size: 4em; /* Revert font size for larger screens */
+  }
 }
