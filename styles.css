@@ -1,44 +1,51 @@
 body {
-    font-family: 'Consolas', sans-serif;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-    margin: 0;
-    background-color: #222; /* Dark background color */
-    color: #87CEEB; /* Light text color */
+  font-family: 'Consolas', sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  margin: 0;
+  background-color: #222; /* Dark background color */
+  color: #87CEEB; /* Light text color */
+  position: relative; /* Set body to relative positioning */
+}
+
+img#oldman-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: auto; /* Make the height adjust proportionally */
+  z-index: -1; /* Set a lower z-index to position it behind countdown items */
 }
 
 .countdown-container {
-    display: flex;
-    flex-direction: column; /* Change to column layout for mobile */
-    align-items: center; /* Center vertically */
-    text-align: center; /* Center align text */
-}
-
-.old-man {
-    margin-bottom: 20px; /* Adjust margin */
-    color: darkorange; /* Change text color to orange */
-    font-weight: bold; /* Make text bold */
-}
-
-.old-man h2 {
-    margin: 0; /* Remove left and right margin */
+  flex: 1;
+  display: flex;
+  flex-direction: column; /* Change to column layout for mobile */
+  align-items: center; /* Center vertically */
+  text-align: center; /* Center align text */
+  padding: 20px; /* Add padding for better mobile layout */
+  z-index: 1; /* Set a higher z-index to position it in front of background image */
 }
 
 .countdown-item {
-    margin: 10px 0; /* Adjust margin */
-    font-size: 2em; /* Decrease font size for mobile */
+  margin: 10px 0; /* Adjust margin */
+  font-size: 2em; /* Decrease font size for mobile */
 }
 
 @media (min-width: 600px) {
-  .countdown-container {
-    flex-direction: row; /* Revert to row layout for larger screens */
-    justify-content: center; /* Center items horizontally */
-  }
+img#oldman-image {
+  width: 50%;
+}
 
-  .countdown-item {
-    margin: 0 15px; /* Adjust margin */
-    font-size: 4em; /* Revert font size for larger screens */
-  }
+.countdown-container {
+  flex-direction: row; /* Revert to row layout for larger screens */
+  justify-content: center; /* Center items horizontally */
+}
+
+.countdown-item {
+  margin: 0 15px; /* Adjust margin */
+  font-size: 4em; /* Revert font size for larger screens */
+}
 }
