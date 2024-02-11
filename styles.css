@@ -6,7 +6,7 @@ body {
   height: 100vh;
   margin: 0;
   background-color: #222; /* Dark background color */
-  color: #87CEEB; /* Light text color */
+  color: orange; /* Light text color */
   position: relative; /* Set body to relative positioning */
 }
 
